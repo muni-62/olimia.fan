@@ -1,0 +1,153 @@
+.card{
+  height: 700px;
+}
+
+.profile-card {
+  background: var(--accent-color);
+  color: var(--secondary-color);
+  display: flex;
+  margin: 0 auto;
+  overflow: hidden;
+  opacity: 0;
+}
+.profile-card .imgBox{
+  object-fit: cover;
+  object-position: center;
+  img{
+    height: 100%;
+  }
+}
+.profile-card td {
+  font-size: 2rem;
+}
+.profile-card table{
+  margin: 75px auto;
+  padding: 30px;
+}
+#profile-card.activeP {
+  animation:
+    init 0.5s ease both,
+    materia 0.5s 0.5s ease both;
+}
+#profile-card.removeP{
+  animation: cClose 0.5s 0.2s ease both;
+}
+#profile-card.activeP .imgBox {
+  height: 100%;
+  animation: iMoveIn 1s 1.1s ease both;
+}
+.removeP .tBox{
+  animation: iClose 0.3s ease forwards;
+}
+.removeP img{
+  animation: iClose 0.3s ease forwards;
+}
+.activeP .tBox {
+  animation: moveIn 1s 1.1s ease both;
+}
+
+#profile-card2.activeP{
+  background-color: white;
+  animation:
+  init 0.5s ease both,
+  materia 0.5s 0.5s ease both;
+}
+#profile-card2.activeP .imgBox{
+  margin:  0 auto;
+  height: 100%;
+  animation: Img 0.5s 0.5s ease both;
+
+}
+#profile-card2.removeP{
+  background-color: white;
+  animation: cClose 0.5s 0.2s ease both;
+}
+#profile-card2.removeP .imgBox{
+  margin:  0 auto;
+  height: 100%;
+  animation: iClose 0.3s  0.2s ease forwards;
+}
+/* Keyframes */
+@keyframes iClose{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+@keyframes cClose{
+  0%{
+    transform: translateY(0);
+    width: 1200px;
+    height: 650px;
+    border-radius: 10px;
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translateY(200px);
+  }}
+
+@keyframes Img{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }}
+@keyframes init {
+  0% {
+      width: 0;
+      height: 0;
+      opacity: 1;
+      transform: translateY(10px);
+    }
+  100% {
+      width: 56px;
+      height: 56px;
+      opacity: 1;
+      transform: translateY(200px);
+    }}
+
+    @keyframes materia {
+      0% {
+        border-radius: 50%;
+      }
+      50% {
+          border-radius: 10px;
+        }
+      100% {
+        transform: translateY(0);
+          width: 1200px;
+          height: 650px;
+          border-radius: 10px;
+        }}
+
+@keyframes iMoveIn {
+  0% {
+      transform: translateX(-120px);
+      opacity: 0;
+    }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+    }}
+
+@keyframes moveIn {
+  0% {
+      transform: translateY(70px);
+      opacity: 0;
+    }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+    }}
+
+
