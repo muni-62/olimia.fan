@@ -13,6 +13,7 @@
     box-sizing: border-box;
     animation-timing-function: ease;
     cursor: url("img/通常の選択.cur") , auto;
+    scrollbar-width: none; 
 }
 ::selection {
     background-color: var(--secondary-color);
