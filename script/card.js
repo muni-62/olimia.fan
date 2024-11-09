@@ -77,3 +77,5 @@ if (otherCard!== card && !otherCard.classList.contains("front")) {
 
   oneClick();
 });
+
+
