@@ -44,8 +44,8 @@
 .card__visual.-front {
   color: white;
   z-index: 1;
-  background-color: red;
-  background-image: url("../img/back.svg");
+  background-color: rgb(49, 49, 49);
+  /* background-image: url("../img/back.svg"); */
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
