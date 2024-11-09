@@ -1,0 +1,123 @@
+:root{
+    --primary-color: #252525;
+    --secondary-color: #ececef;
+    --accent-color: #223447;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    cursor: none;
+}
+html{
+    font-size: 16px;
+    color: white;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 500;
+    font-style: normal;
+    user-select: none;  
+        cursor: none;
+
+}
+
+.circle {
+    position: absolute;
+    width: 10px; /* 円の直径 */
+    height: 10px;
+    background-color: #75fee9a2; /* 円の色 */
+    border-radius: 50%; /* 円形にする */
+    border: 1px solid #252525;
+    pointer-events: none; /* マウスイベントを無視 */
+    z-index: 99999;
+    box-shadow: 0 0 10px rgba(117, 254, 233, 0.6), /* 外側の発光 */
+    0 0 20px rgba(117, 254, 233, 0.3); /* 内側の発光 */
+}
+.diamond {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #75feea; /* ひし形のふちの色 */
+    background-color: transparent; /* 背景を透明に */
+    transform: rotate(45deg);
+    pointer-events: none; /* マウスイベントを無視 */
+    transition: transform 0.1s ease, top 0.1s ease, left 0.1s ease; /* ふわっとした動き */
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.8); /* 発光効果 */
+    z-index: 99998;
+}
+
+
+
+main{
+    scrollbar-width: none;
+    overflow: auto;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+}
+section{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-align: start;
+}
+footer{
+    display: none;
+}
+.title{
+    margin-top: 50px;
+    font-size: 4rem;
+    font-family: "Kaisei Tokumin", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: honeydew;
+    text-align: left;
+    text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.7),
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 15px rgba(0, 204, 255, 0.5),
+    0 0 20px rgba(0, 204, 255, 0.3);
+animation: float 3s ease-in-out infinite;
+}
+
+.subTitle {
+    text-align: center;
+    font-size: 3rem;
+    position: relative;
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .subTitle {
+    display: flex;
+    align-items: center;
+  }
+  
+  .subTitle::before,
+  .subTitle::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: #666;
+  }
+  
+  .subTitle::before {
+    margin-right: 1rem;
+    background: linear-gradient(-90deg, #666, transparent);
+  }
+  
+  .subTitle::after {
+    margin-left: 1rem;
+    background: linear-gradient(90deg, #666, transparent);
+  }
+
+.bgColor{
+    padding: 10px;
+    border-radius: 10px;
+}
+/* @keyframes float {
+0% { transform: translateY(0); }
+50% { transform: translateY(-20px); }
+100% { transform: translateY(0); }
+} */
+
