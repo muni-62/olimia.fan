@@ -1,0 +1,31 @@
+#intro{
+    width: 80vw;
+    margin: 0 auto;
+    font-size: 2.2rem;
+    font-family: "Zen Kurenaido", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* 横方向の中央揃え */
+    align-items: center; /* 縦方向の中央揃え */
+}
+
+.text {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column; /* 縦に並べる */
+    overflow: hidden; /* 文字が表示されるまで非表示 */
+    font-size: 2rem;
+    align-items: center; /* 中央揃え */
+    text-align: center; /* テキストを中央揃え */
+
+}
+.line {
+    display: flex; /* 各行を横に並べる */
+}
+.letter {
+    opacity: 0; /* 初期状態で非表示 */
+    transform: translateY(20px); /* 下から上にスライドイン */
+}
